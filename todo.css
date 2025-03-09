@@ -1,0 +1,110 @@
+:root {
+    --bg: #1a1a1a;
+    --card-bg: #1a3c34;
+    --circle-unchecked: #444;
+    --circle-checked: #2a9d8f;
+    --text: #fff;
+    --tab-active: #333;
+}
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 10px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.tabs {
+    display: flex;
+    gap: 10px;
+}
+.tabs button {
+    background: #222;
+    border: none;
+    color: var(--text);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.tabs .active {
+    background: var(--tab-active);
+}
+.add {
+    background: none;
+    border: none;
+    color: var(--text);
+    font-size: 24px;
+}
+.task-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.task-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.task-name, .frequency {
+    font-size: 16px;
+}
+.grid {
+    display: flex;
+    gap: 5px;
+    margin-top: 5px;
+}
+.circle {
+    width: 30px;
+    height: 30px;
+    background: var(--circle-unchecked);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-size: 12px;
+    position: relative;
+}
+.circle.checked {
+    background: var(--circle-checked);
+}
+.circle.checked::after {
+    content: '✔';
+    color: var(--text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 30px;
+}
+.task-name i {
+    margin-right: 5px;
+    color: #f4a261;
+}
+@media (max-width: 600px) {
+    .task-card {
+        padding: 8px;
+    }
+    .circle {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 10px;
+    }
+    .task-name, .frequency {
+        font-size: 14px;
+    }
+    .tabs button {
+        padding: 3px 8px;
+        font-size: 12px;
+    }
+}
+.tabs button:hover, .add:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

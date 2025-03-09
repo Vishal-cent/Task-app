@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Tasks</h1>
+        <div class="tabs">
+          <button>Today</button>
+          <button class="active">Weekly</button>
+          <button>Overall</button>
+        </div>
+        <button class="add">+</button>
+    </header>
+    <main>
+        <section class="task-card">
+            <div class="task-info">
+                <span class="task-name"><i class="fas fa-clock"></i> Code JS</span>
+                <span class="frequency">Every day</span>
+            </div>
+            <div class="grid">
+                <span class="circle checked">M</span>
+                <span class="circle">T</span>
+                <span class="circle checked">W</span>
+                <span class="circle">T</span>
+                <span class="circle">F</span>
+                <span class="circle">S</span>
+                <span class="circle">S</span>
+            </div>
+        </section>
+        <section class="task-card">
+            <div class="task-info">
+                <span class="task-name"><i class="fas fa-clock"></i> Push-ups</span>
+                <span class="frequency">Every day</span>
+            </div>
+            <div class="grid">
+                <span class="circle">M</span>
+                <span class="circle checked">T</span>
+                <span class="circle">W</span>
+                <span class="circle">T</span>
+                <span class="circle">F</span>
+                <span class="circle">S</span>
+                <span class="circle">S</span>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
